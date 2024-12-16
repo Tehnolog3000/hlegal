@@ -1,0 +1,134 @@
+// Цвета
+$main-regular: rgba(50, 50, 100, 1);
+$main-alt: rgba(70, 70, 110, 1);
+$main-soft: rgba(104, 104, 135, 1);
+$accent: rgba(240, 20, 90, 1);
+$white: #fff; // Используем короткую запись для белого цвета
+$active: rgba(36, 163, 255, 1);
+$background-light: #f4f4f4;
+$background-dark: #2c2c2c;
+$active-burger: #323264;
+$current-page: #f0145a;
+$link-regular: #007bff;
+$burger-size: 32px;
+$burger-hover: rgba(230, 230, 240, 1);
+$burger-line: $main-regular;
+$close-btn-color: rgba(236, 111, 93, 1);
+$grey: rgba(179, 179, 186, 1);
+$grey-bg: rgba(245, 245, 250, 1);
+
+// Градиенты
+
+$red-reversed:linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+$red-text-gradient: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+$main-dark: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #a54b5f 100%);
+$soft: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7a425e 87.53%);
+$red: linear-gradient(323.35deg, #f0145a 6.7%, #693264 70.36%);
+$supersoft: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
+
+
+@mixin heading($level) {
+  @each $property, $value in map-get($headings, $level) {
+    #{$property}: $value;
+  }
+}
+$headings: (
+  h1: (
+    font-family: "Montserrat",
+    font-size: 38px,
+    font-weight: 700,
+    line-height: 46.32px,
+    text-align: left,
+    text-underline-position: from-font,
+    text-decoration-skip-ink: none,
+  ),
+  h2: (
+    font-family: Montserrat,
+    font-size: 30px,
+    font-weight: 700,
+    line-height: 36.57px,
+    text-align: left,
+    text-underline-position: from-font,
+    text-decoration-skip-ink: none,
+  ),
+  h3: (
+    font-family: Montserrat,
+    font-size: 14px,
+    font-weight: 700,
+    line-height: 17.07px,
+    letter-spacing: 1px,
+    text-align: left,
+    text-underline-position: from-font,
+    text-decoration-skip-ink: none,
+  ),
+  h4: (
+    font-family: Montserrat,
+    font-size: 16px,
+    font-weight: 700,
+    line-height: 19.5px,
+    text-align: left,
+    text-underline-position: from-font,
+    text-decoration-skip-ink: none,
+  ),
+);
+@mixin text-style($element) {
+  @each $property, $value in map-get($text-styles, $element) {
+    #{$property}: $value;
+  }
+}
+$text-styles: (
+  span: (
+    font-family: "Montserrat",
+    font-size: 16px,
+    font-weight: 400,
+    line-height: 26px,
+    text-align: left,
+    text-underline-position: from-font,
+    text-decoration-skip-ink: none,
+  ),
+  p: (
+    font-family: "Montserrat",
+    font-size: 16px,
+    font-weight: 700,
+    line-height: 19.5px,
+    text-align: left,
+    text-underline-position: from-font,
+    text-decoration-skip-ink: none,
+  ),
+);
+
+@mixin introduction-text {
+  font-family: 'Montserrat';
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+}
+@mixin h3-regular{
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.82px;
+  text-align: left;
+}
+@mixin h1-mobile{
+font-family: Montserrat;
+font-size: 30px;
+font-weight: 700;
+line-height: 36.57px;
+text-align: left;
+}
+@mixin p-small{
+font-family: Montserrat;
+font-size: 14px;
+font-weight: 400;
+line-height: 22px;
+text-align: left;
+}
+@mixin footer-text{
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.5px;
+  text-align: center;  
+  }

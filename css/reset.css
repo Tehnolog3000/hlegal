@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    color: inherit;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    button{
+        padding: 0;
+        background:transparent;
+    }
+}
