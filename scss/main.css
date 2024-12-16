@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 375px;
   margin: 0 auto;
@@ -280,6 +284,7 @@
   cursor: pointer;
   bottom: 30px;
   z-index: 5;
+  transition: 2s;
 }
 
 .scroll-arrow {
