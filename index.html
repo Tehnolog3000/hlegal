@@ -59,14 +59,94 @@
         </div>
       </div>
     </header>
+    <header class="tablet-header">
+      <div class="union-tablet-header">
+        <div class="language-select-desctop">
+          <button><a href="#">УА</a></button>
+          <button><a href="#">РУ</a></button>
+          <button class="active-btn"><a href="#">EN</a></button>
+        </div>
+        <div class="adress-block">
+          <address>Kyiv, Mechnikova str., 14/1</address>
+        </div>
+        <div class="phone">
+          <span class="phone-text">0800 211 927</span>
+        </div>
+        <div class="white-facebook">
+          <a href="#">
+            <svg  width="24" height="25">
+              <use xlink:href="./sprite.svg#facebook-header"></use>
+            </svg>
+          </a>
+        </div>  
+      </div> 
+        <div class="icon-tablet-header">
+          <a class="logo-tittle" href="index.html">
+            <svg width="130" height="60">
+              <use xlink:href="./sprite.svg#logo"></use>
+            </svg>
+          </a>
+        <div class="main-nav-block">
+          <nav class="nav-menu">
+            <ul class="nav__list">
+              <li ><a href="#" >about us</a></li>
+              <li ><a href="#" >services</a></li>
+              <li ><a href="#" >team</a></li>
+              <li ><a href="#" >publications</a></li>
+              <li ><a href="#" >contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        </div>
+    </header>
+    <header class="desktop-header">
+      <div class="icon-desktop-header">
+        <a class="logo-tittle" href="index.html">
+          <svg width="130" height="60">
+            <use xlink:href="./sprite.svg#logo"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="union-desktop-header">
+        <div class="desktop-contacts">
+          <div class="language-select-desctop">
+            <button><a href="#">УА</a></button>
+            <button><a href="#">РУ</a></button>
+            <button class="active-btn"><a href="#">EN</a></button>
+          </div>
+          <div class="adress-block">
+            <address>Kyiv, Mechnikova str., 14/1</address>
+          </div>
+          <div class="phone">
+            <span class="phone-text">0800 211 927</span>
+          </div>
+          <div class="white-facebook">
+            <a href="#">
+              <svg  width="24" height="25">
+                <use xlink:href="./sprite.svg#facebook-header"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="main-nav-block">
+          <nav class="nav-menu">
+            <ul class="nav__list">
+              <li ><a href="#" >about us</a></li>
+              <li ><a href="#" >services</a></li>
+              <li ><a href="#" >team</a></li>
+              <li ><a href="#" >publications</a></li>
+              <li ><a href="#" >contact</a></li>
+            </ul>
+          </nav>
+        </div> 
+      </div>
+    </header>
 
     <div class="container main-icons">
-      <svg class="icon-h1" width="193" height="600">
-        <use xlink:href="./sprite.svg#h-1"></use>
-      </svg>
-      <svg class="icon-h2" width="287" height="345">
-        <use xlink:href="./sprite.svg#h-2"></use>
-      </svg>
+      <svg class="icon-h1" width="697" height="799">
+        <use xlink:href="./sprite.svg#lambda"></use>
+    </svg>
       <div class="logo-site">
         <h1>you legal <br> solutions <br> provider</h1>
       </div>
@@ -178,25 +258,38 @@
       </div>
     </section>
   </div>
+  <div class="shadow-block">
+    <div class="shadow-top"></div>
+    <div class="shadow-bottom"></div>
+  </div>
   <div class="spacer-2"></div>
   <section class="container container-indent">
     <div class="team-block">
       <div class="team-photo">
-      <img src="./img/O. Oleksandrovskiy.png" alt="Олександр Олександровський">
+        <picture>
+          <source srcset="./img/desktop-hd.png" media="(min-width: 1920px)">
+          <source srcset="./img/desktop-sd.png" media="(min-width: 1440px)">
+          <source srcset="./img/tablet-hd.png" media="(min-width: 1024px)">
+          <source srcset="./img/tablet-sd.png" media="(min-width: 768px)">
+          <source srcset="./img/mobile.png" media="(min-width: 375px)">
+          <img src="./img/mobile.png" alt="Team Photo">
+        </picture>
       </div>
-      <div class="tittle-team">
-        <a href="#">
-          <h3>команда</h3>
-          <svg width="12" height="13">
-            <use xlink:href="./sprite.svg#arrow-right"></use>
-          </svg>
-        </a>
-        <h1>Ми звикли брати на себе відповідальні сть та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h1>
-    </div>
-    <div class="team-names">
-      <h4>Олександр Олександровський</h4>
-      <p>Керуючий партнер</p>
-    </div>
+      <div class="team-descr">
+        <div class="tittle-team">
+          <a href="#">
+            <h3>команда</h3>
+            <svg width="12" height="13">
+              <use xlink:href="./sprite.svg#arrow-right"></use>
+            </svg>
+          </a>
+          <h1>Ми звикли брати на себе відповідальні сть та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h1>
+      </div>
+      <div class="team-names">
+        <h4>Олександр Олександровський</h4>
+        <p>Керуючий партнер</p>
+      </div>
+      </div>
   </section>
   <div class="spacer-3"></div>
   <section class="container banner">
@@ -210,8 +303,15 @@
       <img src="./img/3dlook.png" alt="3d look" class="banner__item look3d">
       <img src="./img/orangear.png" alt="orangear" class="banner__item orangear">
       <img src="./img/adtelegent.png" alt="adtelligent" class="banner__item adtelligent">
+      <img src="./img//clickky.png" alt="clickky" class="banner__item clickky banner-hidden">
+      <img src="./img/ecolease.png" alt="ecolease" class="banner__item ecolease banner-hidden">
+      <img src="./img/infratek.png" alt="infratek" class="banner__item infratek banner-hidden">
+      <img src="./img/city-park.png" alt="city-park" class="banner__item city-park banner-hidden">
+      <img src="./img/art-print.png" alt="art-print" class="banner__item art-print banner-hidden">
+      <img src="./img/ultimate.png" alt="art-print" class="banner__item ultimate banner-hidden">
     </div>
   </section>
+  <div class="spacer-4"></div>
   <section class="container container-indent public">
     <div class="tittle-publication">
       <a href="#">
@@ -223,58 +323,110 @@
       <h1>We have something to tell</h1>
       <div class="publications">
         <div class="publications-item">
-          <a href="#">
-            <img src="./img/graphic.png" alt="graphic">
-            <h4>Equity associate</h4>
-          </a>
+          <div class="picture-item">
+            <a href="#">
+              <picture>
+                <source srcset="./img/blogs/graphic-desktop-hd.png" media="(min-width: 1920px)">
+                <source srcset="./img/blogs/graphic-desktop-cd.png" media="(min-width: 1440px)">
+                <source srcset="./img/blogs/graphic-tablet-hd.png" media="(min-width: 1024px)">
+                <source srcset="./img/blogs/graphic-tablet-cd.png" media="(min-width: 768px)">
+                <source srcset="./img/blogs/graphic-mobile.png" media="(min-width: 375px)">
+                <img src="./img/blogs/graphic-mobile.png" alt="Graphic Photo">
+              </picture>
+            </a>
+          </div>
+          <div class="text-item">
+            <a href="#"><h4>Equity associate</h4></a>
             <span>April 22</span>
             <p>I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents told me that if I…</p>
+          </div >
           
         </div>
         <div class="publications-item">
-          <a href="#">
-            <img src="./img/flag.png" alt="flag">
-            <h4>Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR</h4>
-          </a>
+          <div class="picture-item">
+            <a href="#">
+              <picture>
+                <source srcset="./img/blogs/flag-desktop-hd.png" media="(min-width: 1920px)">
+                <source srcset="./img/blogs/flag-desktop-cd.png" media="(min-width: 1440px)">
+                <source srcset="./img/blogs/flag-tablet-hd.png" media="(min-width: 1024px)">
+                <source srcset="./img/blogs/flag-tablet-cd.png" media="(min-width: 768px)">
+                <source srcset="./img/blogs/flag-mobile.png" media="(min-width: 375px)">
+                <img src="./img/blogs/flag-mobile.png" alt="flag Photo">
+              </picture>
+            </a>
+          </div>
+          <div class="text-item">
+            <a href="#"><h4>Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR</h4></a>
             <span>September 29</span>
             <p>And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.</p>
-          
+          </div>
         </div>
         <div class="publications-item">
-          <a href="#">
-            <img src="./img/team.png" alt="team">
+          <div class="picture-item">
+            <a href="#">
+              <picture>
+                <source srcset="./img/blogs/team-desktop-hd.png" media="(min-width: 1920px)">
+                <source srcset="./img/blogs/team-desktop-cd.png" media="(min-width: 1440px)">
+                <source srcset="./img/blogs/team-tablet-hd.png" media="(min-width: 1024px)">
+                <source srcset="./img/blogs/team-tablet-cd.png" media="(min-width: 768px)">
+                <source srcset="./img/blogs/team-mobile.png" media="(min-width: 375px)">
+                <img src="./img/blogs/team-mobile.png" alt="team Photo">
+              </picture>
+            </a>
+          </div>
+          <div class="text-item">
             <h4>Millennial Testament</h4>
-          </a>
             <span>August 19</span>
             <p>What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation X looks like this: an apartment in…</p>
-          
+          </div>
         </div>
       </div>
   </div>
   </section>
   <footer class="container">
-    <div class="footer-block">
-      <div class="adress-block">
+    <div class="footer-mobile-block">
+      <div class="adress-mobile-block">
         <address>Kyiv, Mechnikova str., 14/1</address>
         <a href="https://maps.app.goo.gl/Z5JpbsSExeD82uae8">On map</a>
       </div>
-      <div class="contact-block">
+      <div class="contact-mobile-block">
         <svg width="39" height="38">
           <use xlink:href="./sprite.svg#facebook"></use>
       </svg>
        <p>0800 211 927</p>
       <p class="email">
-        <a href="mailto:example@example.com">example@example.com</a>
+        <a href="mailto:contact@forstudy.space">contact@forstudy.space</a>
       </p>
     </div>
     <div class="copyright">
       <a href="#"><p>© 2021 HLEGAL Law company, LLC</p></a>
     </div>
    </div>
- 
   </footer>
-  
-
+  <footer class="container">
+    <div class="footer-desktop-block">
+      <div class="union-footer">
+        <div class="adress-footer-block">
+          <address>Kyiv, Mechnikova str., 14/1</address>
+          <a href="https://maps.app.goo.gl/Z5JpbsSExeD82uae8" class="footer-link">On map</a>
+        </div>
+        <div class="contact-footer-block">
+          <div class="blue-facebook">
+            <svg width="39" height="38">
+              <use xlink:href="./sprite.svg#facebook"></use>
+            </svg>
+          </div>
+          <p class="phone-footer">0800 211 927</p>
+          <p class="mail-footer">
+            <a href="mailto:contact@forstudy.space" class="footer-link">contact@forstudy.space</a>
+          </p>
+        </div>
+      </div>
+      <div class="copyright-desktop">
+        <p>© 2021 HLEGAL Law company, LLC</p>
+      </div>
+    </div>
+  </footer>
       
  
 
