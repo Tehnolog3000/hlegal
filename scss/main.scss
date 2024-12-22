@@ -17,8 +17,8 @@ html {
     padding-right: 60px;
   }
   @media (min-width: $desctop-hd){
-    padding-left: 160px;
-    padding-right: 160px;
+    padding-left: 150px;
+    padding-right: 150px;
   }
 }
 
@@ -565,115 +565,207 @@ html {
   }
 
 }
-.slider-block {
-  nav {
-    ul {
-      display: flex;
-      gap: 30px;
-      padding-left: 30px;
-      overflow-x: auto;
-      -ms-overflow-style: none;
-      @media (min-width: $tablet-sd) {
-        padding-left: 60px;
-      }
-      &::-webkit-scrollbar {
-        display: none;
-      }
 
-      li {
-        flex: 0 0 auto;
 
-        h2 {
-          @include heading(h2);
-          @media (min-width: $tablet-sd) {
-            @include heading(h1);
-          }
+// МОБИЛЬНЫЙ
+
+
+.tabs-block-mobile {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .tabs-block-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    margin-bottom: 60px;
+    padding-left: 60px;
+  }
+
+  .tabs-column-mobile { 
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    li {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      
+      a {
+        color: $grey;
+        @include heading (h1);
+        transition: color 0.3s ease;
         
-          @media (min-width: $tablet-hd) {
-            @include heading(h1);
-          }
-        
-          @media (min-width: $desctop-cd) {
-            @include heading(h1);
-          }
-        
-          @media (min-width: $desctop-hd) {
-            @include heading(h1);
-          }
-
-          a {
-            color: $grey;
-            display: block;
-            text-decoration: none;
-
-            &:hover {
-              color: $accent;
-            }
-          }
+        &:hover {
+          color: $accent;
         }
+      }
 
-        &.active h2 a {
-          background: $red-reversed;
-          background-clip: text;
-          color: transparent;
-        }
+      &.active a {
+        background: $red-reversed;
+        background-clip: text;
+        color: transparent;
       }
     }
   }
 }
-.slider-content {
-  position: relative;
-  color: $white;
+    @media (max-width: 768px){
+      .tabs-block-mobile{
+        padding-left: 30px;
+      }
+      
+    }
+
+.tab-content-mobile{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-bottom: 30px;
-  @media (min-width: $tablet-sd) {
-    margin-bottom: 60px;
+  justify-content: flex-start;
+  gap: 30px;
+  padding-right: 60px;
+    h2 {
+      @include heading(h2);
+      color: $white;
+    }
+    p {
+      @include introduction-text;
+      color: $white;
+    }
+    @media (max-width: 768px){
+        padding-right: 30px;
+      }
+
   }
-  h2 {
-    font-family: Montserrat;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24.38px;
-    // text-align: left;
-    padding-top: 64px;
-    @media (min-width: $tablet-sd) {
-      @include heading(h2);
-    }
+
   
-    @media (min-width: $tablet-hd) {
-      @include heading(h2);
-    }
-  
-    @media (min-width: $desctop-cd) {
-      @include heading(h2);
-    }
-  
-    @media (min-width: $desctop-hd) {
-      @include heading(h2);
-    }
-  
+  .tabs-block-mobile::before {
+    content: "";
+    position: absolute;
+    left: 0; 
+    top: 0;
+    bottom: 40px;
+    width: 4px;
+    background-color:#FFFFFF4D;
   }
-  p {
-    @include introduction-text;
-    padding-top: 30px;
+  
+
+
+
+
+
+
+
+// ДИСПЛЕЙ
+.tabs-block {
+  display: flex; /* Дефолтное состояние — видно */
+  justify-content: space-between;
+  max-width: 904px;
+  align-items: flex-start;
+  gap: 124px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 60px;
+
+  @media (max-width: 1023px) {
+    display: none; /* Скрываем только для мобильной версии */
   }
 }
-.slider-content::before {
-  content: "";
-  position: absolute;
-  top: 30px;
-  width: 315px;
-  height: 4px;
-  background-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-50%);
-  z-index: 0;
-  @media (min-width: $tablet-sd) {
-    width: 648px;
-    transform: translateY(-50%);
+
+  .tabs-column { 
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    li {
+      text-align: right;
+      width: 375px; 
+      
+      a {
+        text-decoration: none;
+        color: $grey;
+        @include heading (h1);
+        
+        
+
+        &:hover {
+          color: $accent;
+        }
+      }
+
+      &.active a {
+        background: $red-reversed;
+        background-clip: text;
+        color: transparent;
+      }
+    }
   }
-}
+
+
+.tab-content{
+    h2 {
+      @include heading(h2);
+      color: $white;
+      padding-bottom: 30px;
+    }
+    p {
+      @include introduction-text;
+      color: $white;
+    }
+  }
+
+  
+  .tabs-block::before {
+    content: "";
+    position: absolute;
+    left: 48%; 
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color:#FFFFFF4D;
+  }
+  @media (min-width: 1440px) {
+    .tabs-block {
+      max-width: 1080px;
+      position: relative;
+    }
+    .tabs-block::before {
+      content: "";
+      position: absolute;
+      left: 41%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+    }
+    .tab-content{
+      display: flex;
+      flex-direction: column;
+      margin: auto 0;
+    }
+  }
+  
+  @media (min-width: 1920px) {
+    .tabs-block {
+      max-width: 1360px;
+    }
+    .tabs-block::before {
+      content: "";
+      position: absolute;
+      left: 32%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+    }
+  }
+
+
+
 
 .shadow-block{
   display: flex;
@@ -797,6 +889,8 @@ html {
   }
   @media (min-width: $desctop-hd) {
     padding-left: 0px;
+    column-gap: 52px;
+    justify-content: center;
   .container-indent{
     padding: 0px 0px;
   }

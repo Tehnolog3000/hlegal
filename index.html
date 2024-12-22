@@ -150,32 +150,71 @@
       <div class="logo-site">
         <h1>you legal <br> solutions <br> provider</h1>
       </div>
-      <a class="btn-scroll" href="#second-section" aria-label="Прокрутить вниз">
+      <a class="btn-scroll" href="#nav-section" aria-label="Прокрутить вниз">
         <svg class="scroll-arrow" width="42" height="42">
           <use xlink:href="./sprite.svg#scroll-arrow"></use>
         </svg>
       </a>
     </div>
     <div class="spacer-1"></div>
-    <section class="container">
-      <div class="slider-block">
-        <nav>
-          <ul>
-            <li class="active"><h2><a href="#">Consistent</a></h2></li>
-            <li><h2><a href="#">Customer oriented</a></h2></li>
-            <li><h2><a href="#">Innovative</a></h2></li>
-            <li><h2><a href="#">Business oriented</a></h2></li>
-          </ul>
-        </nav>
+
+    <section container tabs-mobile id="nav-section">
+      <div id="tabs-mobile" class="tabs-block-mobile">
+        <ul class="tabs-column-mobile">
+          <li class="active"><a href="#tabs-1">Consistent</a></li>
+          <li><a href="#tabs-2">Customer oriented</a></li>
+          <li><a href="#tabs-3">Innovative</a></li>
+          <li><a href="#tabs-4">Business oriented</a></li>
+        </ul>
+        <div id="tabs-1" class="tab-content-mobile">
+          <h2>We turn the idea of legal services</h2>
+          <p>Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.</p>
+        </div>
+        <div id="tabs-2" class="tab-content-mobile">
+          <h2>We prioritize your needs</h2>
+          <p>Our approach revolves around understanding and meeting the unique requirements of each client. By building trust and focusing on personalized solutions, we ensure long-term partnerships and satisfaction.</p>
+        </div>
+        <div id="tabs-3" class="tab-content-mobile">
+          <h2>Revolutionizing traditional methods</h2>
+          <p>Embracing modern technologies and creative problem-solving, our team stays ahead of trends to offer fresh perspectives and groundbreaking strategies for legal and business challenges.</p>
+        </div>
+        <div id="tabs-4" class="tab-content-mobile">
+          <h2>Helping businesses thrive</h2>
+          <p>With a deep understanding of corporate structures and market dynamics, we provide legal solutions that drive growth, manage risks, and create value for businesses across diverse industries.</p>
+        </div>
+      </div>
+    </section>  
+
+
+
+
+    <section container tabs-desktop id="nav-section">
+      <div id="tabs-desktop" class="tabs-block">
+        <ul class="tabs-column">
+          <li class="active"><a href="#tabs-desktop-1">Consistent</a></li>
+          <li><a href="#tabs-desktop-2">Customer oriented</a></li>
+          <li><a href="#tabs-desktop-3">Innovative</a></li>
+          <li><a href="#tabs-desktop-4">Business oriented</a></li>
+        </ul>
+        <div id="tabs-desktop-1" class="tab-content">
+          <h2>We turn the idea of legal services</h2>
+          <p>Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.</p>
+        </div>
+        <div id="tabs-desktop-2" class="tab-content">
+          <h2>We prioritize your needs</h2>
+          <p>Our approach revolves around understanding and meeting the unique requirements of each client. By building trust and focusing on personalized solutions, we ensure long-term partnerships and satisfaction.</p>
+        </div>
+        <div id="tabs-desktop-3" class="tab-content">
+          <h2>Revolutionizing traditional methods</h2>
+          <p>Embracing modern technologies and creative problem-solving, our team stays ahead of trends to offer fresh perspectives and groundbreaking strategies for legal and business challenges.</p>
+        </div>
+        <div id="tabs-desktop-4" class="tab-content">
+          <h2>Helping businesses thrive</h2>
+          <p>With a deep understanding of corporate structures and market dynamics, we provide legal solutions that drive growth, manage risks, and create value for businesses across diverse industries.</p>
+        </div>
       </div>
     </section>
 
-    <section id="second-section" class="container container-indent">
-      <div class="slider-content">
-        <h2>We turn the idea of legal services</h2>
-        <p>Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.</p>
-      </div>
-    </section>
     <section class="container container-indent">
       <div class="tittle-wrap">
         <a href="#">
@@ -431,7 +470,23 @@
  
 
   
-    
+<script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+></script>
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <script>
+      $( function() {
+        $( "#tabs-mobile" ).tabs();
+      } );
+      </script>
+      <script>
+        $( function() {
+          $( "#tabs-desktop" ).tabs();
+        } );
+        </script>
        <script src="./script.js"></script>
 </body>
 </html>

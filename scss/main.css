@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   scroll-behavior: smooth;
 }
@@ -20,8 +21,8 @@ html {
 }
 @media (min-width: 1920px) {
   .container-indent {
-    padding-left: 160px;
-    padding-right: 160px;
+    padding-left: 150px;
+    padding-right: 150px;
   }
 }
 
@@ -589,25 +590,69 @@ html {
   }
 }
 
-.slider-block nav ul {
-  display: flex;
-  gap: 30px;
-  padding-left: 30px;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-}
-@media (min-width: 768px) {
-  .slider-block nav ul {
-    padding-left: 60px;
-  }
-}
-.slider-block nav ul::-webkit-scrollbar {
+.tabs-block-mobile {
   display: none;
 }
-.slider-block nav ul li {
-  flex: 0 0 auto;
+
+@media (max-width: 1023px) {
+  .tabs-block-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    margin-bottom: 60px;
+    padding-left: 60px;
+  }
+  .tabs-column-mobile {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .tabs-column-mobile::-webkit-scrollbar {
+    display: none;
+  }
+  .tabs-column-mobile li {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+  .tabs-column-mobile li a {
+    color: rgb(179, 179, 186);
+    font-family: "Montserrat";
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 46.32px;
+    text-align: left;
+    text-underline-position: from-font;
+    -webkit-text-decoration-skip-ink: none;
+            text-decoration-skip-ink: none;
+    transition: color 0.3s ease;
+  }
+  .tabs-column-mobile li a:hover {
+    color: rgb(240, 20, 90);
+  }
+  .tabs-column-mobile li.active a {
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+  }
 }
-.slider-block nav ul li h2 {
+@media (max-width: 768px) {
+  .tabs-block-mobile {
+    padding-left: 30px;
+  }
+}
+.tab-content-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+  padding-right: 60px;
+}
+.tab-content-mobile h2 {
   font-family: Montserrat;
   font-size: 30px;
   font-weight: 700;
@@ -616,164 +661,142 @@ html {
   text-underline-position: from-font;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+  color: #fff;
 }
-@media (min-width: 768px) {
-  .slider-block nav ul li h2 {
-    font-family: "Montserrat";
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 46.32px;
-    text-align: left;
-    text-underline-position: from-font;
-    -webkit-text-decoration-skip-ink: none;
-            text-decoration-skip-ink: none;
+.tab-content-mobile p {
+  font-family: "Montserrat";
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .tab-content-mobile {
+    padding-right: 30px;
   }
 }
-@media (min-width: 1024px) {
-  .slider-block nav ul li h2 {
-    font-family: "Montserrat";
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 46.32px;
-    text-align: left;
-    text-underline-position: from-font;
-    -webkit-text-decoration-skip-ink: none;
-            text-decoration-skip-ink: none;
+
+.tabs-block-mobile::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 40px;
+  width: 4px;
+  background-color: rgba(255, 255, 255, 0.3019607843);
+}
+
+.tabs-block {
+  display: flex; /* Дефолтное состояние — видно */
+  justify-content: space-between;
+  max-width: 904px;
+  align-items: flex-start;
+  gap: 124px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 60px;
+}
+@media (max-width: 1023px) {
+  .tabs-block {
+    display: none; /* Скрываем только для мобильной версии */
   }
 }
-@media (min-width: 1440px) {
-  .slider-block nav ul li h2 {
-    font-family: "Montserrat";
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 46.32px;
-    text-align: left;
-    text-underline-position: from-font;
-    -webkit-text-decoration-skip-ink: none;
-            text-decoration-skip-ink: none;
-  }
+
+.tabs-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
-@media (min-width: 1920px) {
-  .slider-block nav ul li h2 {
-    font-family: "Montserrat";
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 46.32px;
-    text-align: left;
-    text-underline-position: from-font;
-    -webkit-text-decoration-skip-ink: none;
-            text-decoration-skip-ink: none;
-  }
+.tabs-column li {
+  text-align: right;
+  width: 375px;
 }
-.slider-block nav ul li h2 a {
-  color: rgb(179, 179, 186);
-  display: block;
+.tabs-column li a {
   text-decoration: none;
+  color: rgb(179, 179, 186);
+  font-family: "Montserrat";
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46.32px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
-.slider-block nav ul li h2 a:hover {
+.tabs-column li a:hover {
   color: rgb(240, 20, 90);
 }
-.slider-block nav ul li.active h2 a {
+.tabs-column li.active a {
   background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
 }
 
-.slider-content {
-  position: relative;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-@media (min-width: 768px) {
-  .slider-content {
-    margin-bottom: 60px;
-  }
-}
-.slider-content h2 {
+.tab-content h2 {
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 24.38px;
-  padding-top: 64px;
+  line-height: 36.57px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #fff;
+  padding-bottom: 30px;
 }
-@media (min-width: 768px) {
-  .slider-content h2 {
-    font-family: Montserrat;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 36.57px;
-    text-align: left;
-    text-underline-position: from-font;
-    -webkit-text-decoration-skip-ink: none;
-            text-decoration-skip-ink: none;
-  }
-}
-@media (min-width: 1024px) {
-  .slider-content h2 {
-    font-family: Montserrat;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 36.57px;
-    text-align: left;
-    text-underline-position: from-font;
-    -webkit-text-decoration-skip-ink: none;
-            text-decoration-skip-ink: none;
-  }
-}
-@media (min-width: 1440px) {
-  .slider-content h2 {
-    font-family: Montserrat;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 36.57px;
-    text-align: left;
-    text-underline-position: from-font;
-    -webkit-text-decoration-skip-ink: none;
-            text-decoration-skip-ink: none;
-  }
-}
-@media (min-width: 1920px) {
-  .slider-content h2 {
-    font-family: Montserrat;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 36.57px;
-    text-align: left;
-    text-underline-position: from-font;
-    -webkit-text-decoration-skip-ink: none;
-            text-decoration-skip-ink: none;
-  }
-}
-.slider-content p {
+.tab-content p {
   font-family: "Montserrat";
   font-size: 19px;
   font-weight: 400;
   line-height: 30px;
   text-align: left;
-  padding-top: 30px;
+  color: #fff;
 }
 
-.slider-content::before {
+.tabs-block::before {
   content: "";
   position: absolute;
-  top: 30px;
-  width: 315px;
-  height: 4px;
-  background-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-50%);
-  z-index: 0;
-}
-@media (min-width: 768px) {
-  .slider-content::before {
-    width: 648px;
-    transform: translateY(-50%);
-  }
+  left: 48%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: rgba(255, 255, 255, 0.3019607843);
 }
 
+@media (min-width: 1440px) {
+  .tabs-block {
+    max-width: 1080px;
+    position: relative;
+  }
+  .tabs-block::before {
+    content: "";
+    position: absolute;
+    left: 41%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+  }
+  .tab-content {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+  }
+}
+@media (min-width: 1920px) {
+  .tabs-block {
+    max-width: 1360px;
+  }
+  .tabs-block::before {
+    content: "";
+    position: absolute;
+    left: 32%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+  }
+}
 .shadow-block {
   display: flex;
   flex-direction: column;
@@ -955,6 +978,9 @@ html {
 @media (min-width: 1920px) {
   .service-wrapper {
     padding-left: 0px;
+    -moz-column-gap: 52px;
+         column-gap: 52px;
+    justify-content: center;
   }
   .service-wrapper .container-indent {
     padding: 0px 0px;
