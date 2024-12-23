@@ -890,7 +890,6 @@ html {
   @media (min-width: $desctop-hd) {
     padding-left: 0px;
     column-gap: 52px;
-    justify-content: center;
   .container-indent{
     padding: 0px 0px;
   }
@@ -940,39 +939,172 @@ html {
   height: 30px;
 }
 
+
+
+// .my-slider {
+//   max-width: 100%; 
+//   margin: 0 auto;
+// }
+// .team-block {
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: column;
+//   margin-bottom: 46px;
+//   background-color: $grey-bg;
+//   border-bottom-right-radius: 12px;
+//   border-bottom-left-radius: 12px;
+  
+//   @media (min-width: $tablet-hd) {
+//     flex-direction: row;
+//     align-items: center;
+//   } 
+  
+//     .team-photo {
+      
+//       flex-shrink: 0;
+  
+      
+//     }
+//     .team-descr {
+//       flex: 1;
+       
+//     }
+//   }
+// .team-descr{
+//   display: flex;
+//   flex-direction: column;
+// }
+// .tittle-team {
+//   padding: 30px;
+//   a {
+//     display: flex;
+//     align-items: center;
+//     gap: 2px;
+//   }
+
+//   h3 {
+//     @include heading(h3);
+//     color: $active;
+//     text-transform: uppercase;
+//   }
+//   h1 {
+//     @include h1-mobile;
+//     background: $red-text-gradient;
+//     background-clip: text;
+//     color: transparent;
+//     padding-top: 5px;
+//       @media (min-width: $tablet-hd) {
+//         @include heading (h1);
+//       }
+//   }
+// }
+// .team-names {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 6px;
+//   padding: 0px 30px 30px 30px;
+//   color: $grey;
+//   h4 {
+//     @include heading(h4);
+//   }
+//   p {
+//     @include p-small;
+//   }
+// }
+// .team-block {
+//   width: 100%;
+//   flex: 0 0 auto; 
+//   width: 20%;
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-bottom: 46px;
+//   background-color: $grey-bg;
+//   border-bottom-right-radius: 12px;
+//   border-bottom-left-radius: 12px;
+
+//   @media (min-width: $tablet-hd) {
+//     flex-wrap: nowrap; 
+//     flex-direction: row; 
+//     align-items: center; 
+//   }
+
+//   .team-photo {
+//     border: solid 2px blue;
+//     flex-shrink: 0; 
+//     margin-bottom: 20px; 
+//   }
+
+//   .team-descr {
+//     width: 40%;
+//     border: solid 3px red;
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column; 
+//     justify-content: center;
+//   }
+// }
+
+// .tittle-team {
+//   padding: 30px;
+
+//   a {
+//     display: flex;
+//     align-items: center;
+//     gap: 2px;
+//   }
+
+//   h3 {
+//     @include heading(h3);
+//     color: $active;
+//     text-transform: uppercase;
+//   }
+
+//   h1 {
+//     @include h1-mobile;
+//     background: $red-text-gradient;
+//     background-clip: text;
+//     color: transparent;
+//     padding-top: 5px;
+
+//     @media (min-width: $tablet-hd) {
+//       @include heading(h1);
+//     }
+//   }
+// }
+
+// .team-names {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 6px;
+//   padding: 0px 30px 30px 30px;
+//   color: $grey;
+
+//   h4 {
+//     @include heading(h4);
+//   }
+
+//   p {
+//     @include p-small;
+//   }
+// }
+
 .team-block {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   background-color: $grey-bg;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
-  
+
   @media (min-width: $tablet-hd) {
     flex-direction: row;
     align-items: flex-start;
   } 
-  @media (min-width: $tablet-hd) {
-      flex-direction: row;
-      align-items: flex-start;
-    }
-  
-    .team-photo {
-      flex-shrink: 0;
-    }
-  
-    .team-descr {
-      flex: 1; 
-    }
-  }
-
-.team-photo{
-  display: block;
 }
+
 .team-descr{
   display: flex;
   flex-direction: column;
-  // gap: 30px;
+
 }
 .tittle-team {
   padding: 30px;
@@ -1011,6 +1143,9 @@ html {
     @include p-small;
   }
 }
+
+
+
 .spacer-3 {
   height: 60px;
 }

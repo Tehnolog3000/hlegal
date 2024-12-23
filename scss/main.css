@@ -980,7 +980,6 @@ html {
     padding-left: 0px;
     -moz-column-gap: 52px;
          column-gap: 52px;
-    justify-content: center;
   }
   .service-wrapper .container-indent {
     padding: 0px 0px;
@@ -1046,7 +1045,6 @@ html {
 .team-block {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   background-color: rgb(245, 245, 250);
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
@@ -1056,22 +1054,6 @@ html {
     flex-direction: row;
     align-items: flex-start;
   }
-}
-@media (min-width: 1024px) {
-  .team-block {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-}
-.team-block .team-photo {
-  flex-shrink: 0;
-}
-.team-block .team-descr {
-  flex: 1;
-}
-
-.team-photo {
-  display: block;
 }
 
 .team-descr {
