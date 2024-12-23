@@ -1043,17 +1043,25 @@ html {
 }
 
 .team-block {
-  display: flex;
-  flex-wrap: wrap;
   background-color: rgb(245, 245, 250);
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
 }
+
+.team-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
 @media (min-width: 1024px) {
-  .team-block {
+  .team-wrapper {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
+}
+
+.team-photo {
+  display: block;
 }
 
 .team-descr {
@@ -1130,6 +1138,15 @@ html {
   font-weight: 400;
   line-height: 22px;
   text-align: left;
+}
+
+.slick-dots li button:before {
+  color: rgb(36, 163, 255);
+  font-size: 16px;
+}
+.slick-dots li.slick-active button:before {
+  color: rgb(36, 163, 255);
+  opacity: 1;
 }
 
 .spacer-3 {
