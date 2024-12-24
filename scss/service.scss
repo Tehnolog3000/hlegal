@@ -1,0 +1,317 @@
+@import "variables";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.container-indent {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media (min-width: 768px) {
+    .container-indent {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+  @media (min-width: 1920px) {
+    .container-indent {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+  }
+.gradient-background {
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+@include mobile-header;
+@include tablet-header;
+@include desktop-header;
+@include mobile-footer;
+@include desktop-footer;
+
+.shadow-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .shadow-top {
+      width: 335px; 
+      height: 10px;
+      background-color: #CACADB;
+      border-bottom-right-radius: 12px;
+      border-bottom-left-radius: 12px;
+      @media (min-width: $tablet-sd) {
+        width: 728px;
+      }
+      
+      @media (min-width: $tablet-hd) {
+        width: 984px;
+      }
+      
+      @media (min-width: $desctop-cd) {
+        width: 1400px;
+      }
+      
+      @media (min-width: $desctop-hd) {
+        width: 1880px;
+      }
+    }
+    .shadow-bottom {
+      height: 10px;
+      width: 295px; 
+      background-color: #E7E7F2;
+      border-bottom-right-radius: 12px;
+      border-bottom-left-radius: 12px;
+  
+      @media (min-width: $tablet-sd) {
+        width: 688px;
+      }
+      
+      @media (min-width: $tablet-hd) {
+        width: 944px;
+      }
+      
+      @media (min-width: $desctop-cd) {
+        width: 1360px;
+      }
+      
+      @media (min-width: $desctop-hd) {
+        width: 1840px;
+      }
+    }
+  }
+  
+  
+  .tittle-wrap {
+    padding-top: 30px;
+  
+    @media (min-width: $tablet-sd) {
+      padding-top: 60px;
+    }
+  
+    @media (min-width: $desctop-cd) {
+      padding-top: 60px;
+    }
+  
+    @media (min-width: $desctop-hd) {
+      padding-top: 60px;
+    }
+  
+    h2 {
+      @include heading(h2);
+      background: $red-text-gradient;
+      background-clip: text;
+      color: transparent;
+      @media (min-width: $tablet-sd) {
+        @include heading(h1);
+      }
+  
+      @media (min-width: $tablet-hd) {
+        @include heading(h1);
+      }
+  
+      @media (min-width: 1440px) {
+        @include heading(h1);
+      }
+  
+      @media (min-width: 1920px) {
+        @include heading(h1);
+      }
+  }
+  }
+  
+  .service-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+      @media (max-width: $mobile) {
+      row-gap: 30px;
+      padding-top: 30px;
+      padding-bottom: 60px;
+    }
+    @media (min-width: $tablet-sd) {
+      column-gap: 58px;
+      row-gap: 60px;
+  
+    }
+    @media (min-width: $desctop-cd) {
+      gap: 55px;
+      row-gap: 60px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    @media (min-width: $desctop-hd) {
+      padding-left: 0px;
+      column-gap: 52px;
+    .container-indent{
+      padding: 0px 0px;
+    }
+  }
+  }
+  
+  .service-block {
+    h3 {
+      @include h3-regular;
+      color: $active;
+      padding-bottom: 18px;
+    }
+    span {
+      @include text-style(span);
+      color: $white;
+    }
+    @media (min-width: $tablet-sd) {
+      max-width: 294px;
+    }
+  
+    @media (min-width: $tablet-hd) {
+      max-width: 261px;
+    }
+  
+    @media (min-width: $desctop-cd) {
+      max-width: 400px;
+     
+    }
+  
+    @media (min-width: $desctop-hd) {
+      max-width: 493px;
+    }
+  }
+  
+  .icon-container {
+    width: 92px;
+    height: 92px;
+    background-color: $white;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .spacer-2 {
+    height: 30px;
+  }
+  
+    .tittle-banner {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 30px;
+    
+      h3 {
+        @include heading(h3);
+        color: $main-regular;
+        text-transform: uppercase;
+      }
+    }
+    
+    .banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      img {
+        object-fit: none;
+      }
+    
+      @media (min-width: $desctop-cd) {
+        max-width: 1440px;
+      }
+      @media (min-width: $desctop-hd) {
+        max-width: 1720px;
+        border-radius: 12px;
+        overflow: hidden; 
+      }
+  
+      .banner__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 375px;
+        height: 120px;
+         @media (min-width: $tablet-sd) {
+          width: 256px;
+        }
+      
+        @media (min-width: $tablet-hd) {
+          width: 256px;;
+        }
+      
+        @media (min-width: $desctop-cd) {
+          width: 360px;
+        }
+      
+        @media (min-width: $desctop-hd) {
+          width: 430px;
+        }
+    
+        &.hillel {
+          background-color: #1c4280;
+        }
+        &.wannabiz {
+          background-color: #143646;
+        }
+        &.tapgerine {
+          background-color: #f48b30;
+        }
+        &.look3d {
+          background-color: #9e4dc3;
+        }
+        &.orangear {
+          background-color: #fd9339;
+        }
+        &.adtelligent {
+          background-color: #e2e2e4;
+        }
+        &.clickky{
+          background-color: #C71C36;
+        }
+        &.ecolease {
+          background-color: #DCF3F9;
+        }
+        &.infratek {
+          background-color: #EAEAEA;
+        }
+        &.city-park {
+          background-color: #282240;
+        }
+        &.art-print{
+          background-color: #1D4568;
+        }
+        &.ultimate {
+          background-color: #000000;
+        }
+      }
+    }
+    @media (max-width: $mobile) {
+      .banner .banner-hidden {
+        display: none;
+      }
+    }
+
+    .nav__list {
+      li.active a {
+        color: $accent;
+        text-decoration: underline;
+      }
+    }
+    .tablet-header .icon-tablet-header .nav-menu .nav__list li a.active {
+      color: $accent;
+      text-decoration: underline;
+    }
+    .main-header .header__burger .menu .menu__list li a.active {
+      color: $accent;
+    }
