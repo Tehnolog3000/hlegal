@@ -588,28 +588,42 @@ html {
   background-color: #fff;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
+  flex: 1 1 100%;
+  max-width: 100%;
 }
-
 @media (min-width: 768px) {
   .publications-item {
-    width: 309px;
+    flex: 1 1 calc(50% - 15px);
+    max-width: calc(50% - 15px);
   }
 }
 @media (min-width: 1024px) {
   .publications-item {
-    width: 281.33px;
-  }
-}
-@media (min-width: 1440px) {
-  .publications-item {
-    width: 420px;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
   }
 }
 @media (min-width: 1920px) {
   .publications-item {
-    width: 513.33px;
+    flex: 1 1 calc(33.33% - 30px);
+    max-width: calc(33.33% - 30px);
   }
 }
+
+.picture-item {
+  width: 100%;
+  height: auto;
+}
+
+.picture-item picture,
+.picture-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .text-item {
   padding-left: 30px;
   padding-right: 30px;

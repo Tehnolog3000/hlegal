@@ -545,31 +545,41 @@ html {
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-    background-color: #fff;
+    background-color: $white;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
-  }
-
-  @media (min-width: 768px) {
-    .publications-item {
-      width: 309px;
+  
+    flex: 1 1 100%;
+    max-width: 100%;
+  
+    @media (min-width: $tablet-sd) {
+      flex: 1 1 calc(50% - 15px);
+      max-width: calc(50% - 15px);
+    }
+  
+    @media (min-width: $tablet-hd) {
+      flex: 1 1 calc(33.33% - 20px);
+      max-width: calc(33.33% - 20px);
+    }
+  
+    @media (min-width: $desctop-hd) {
+      flex: 1 1 calc(33.33% - 30px);
+      max-width: calc(33.33% - 30px);
     }
   }
-  @media (min-width: 1024px) {
-    .publications-item {
-      width: 281.33px;
-    }
+  .picture-item {
+    width: 100%; 
+    height: auto; 
   }
-  @media (min-width: 1440px) {
-    .publications-item {
-      width: 420px;
-    }
+  
+  .picture-item picture,
+  .picture-item img {
+    display: block; 
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
   }
-  @media (min-width: 1920px) {
-    .publications-item {
-      width: 513.33px;
-    }
-  }
+  
   
   .text-item {
     padding-left: 30px;

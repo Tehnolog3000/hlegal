@@ -29,7 +29,7 @@ html {
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    // min-height: 100vh;
     border-bottom-right-radius: 12px;
     border-bottom-left-radius: 12px;
   }
@@ -134,63 +134,47 @@ html {
   .service-wrapper {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 30px;
+    gap: 30px;
+    padding: 60px 0;
     width: 100%;
-    padding-top: 60px;
-    padding-bottom: 60px;
-      @media (max-width: $mobile) {
-      row-gap: 30px;
-      padding-top: 30px;
-      padding-bottom: 60px;
+  
+    @media (max-width: $mobile) {
+      gap: 20px;
+      padding: 30px 0;
     }
+  
     @media (min-width: $tablet-sd) {
-      column-gap: 58px;
-      row-gap: 60px;
-  
+      gap: 40px;
     }
+  
     @media (min-width: $desctop-cd) {
-      gap: 55px;
-      row-gap: 60px;
-      padding-left: 0px;
-      padding-right: 0px;
-    }
-    @media (min-width: $desctop-hd) {
-      padding-left: 0px;
-      column-gap: 52px;
-    .container-indent{
-      padding: 0px 0px;
+      gap: 60px;
     }
   }
-  }
-  
   .service-block {
+    flex: 1 1 calc(33.33% - 30px);
+    display: flex;
+    flex-direction: column;
+  
     h3 {
       @include h3-regular;
       color: $active;
-      padding-bottom: 18px;
+      margin-bottom: 18px;
     }
+  
     span {
       @include text-style(span);
       color: $white;
     }
-    @media (min-width: $tablet-sd) {
-      max-width: 294px;
+  
+    @media (max-width: $tablet-sd) {
+      flex: 1 1 calc(50% - 20px);
     }
   
-    @media (min-width: $tablet-hd) {
-      max-width: 261px;
-    }
-  
-    @media (min-width: $desctop-cd) {
-      max-width: 400px;
-     
-    }
-  
-    @media (min-width: $desctop-hd) {
-      max-width: 493px;
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
     }
   }
-  
   .icon-container {
     width: 92px;
     height: 92px;
@@ -201,6 +185,7 @@ html {
     justify-content: center;
     margin-bottom: 30px;
   }
+  
   
   .spacer-2 {
     height: 30px;
@@ -218,89 +203,94 @@ html {
       }
     }
     
-    .banner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      img {
-        object-fit: none;
-      }
-    
-      @media (min-width: $desctop-cd) {
-        max-width: 1440px;
-      }
-      @media (min-width: $desctop-hd) {
-        max-width: 1720px;
-        border-radius: 12px;
-        overflow: hidden; 
-      }
+   
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  padding: 0;
+  img {
+     object-fit: none;
+  }
+
+  @media (min-width: $desctop-hd) {
+    padding: 0 50px;
+  }
+}
+
+.banner__item {
+  flex: 1 1 calc(33.33% - 10px);
+  max-width: calc(33.33% - 10px);
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  @media (min-width: $mobile) {
+    flex: 1 1 100%; 
+    max-width: 100%;
+  }
+
+  @media (min-width: $tablet-sd) {
+    flex: 1 1 33.33%; 
+    max-width: 33.33%;
+  }
+
+  @media (min-width: $tablet-hd) {
+    flex: 1 1 25%; 
+    max-width: 25%;
+  }
+
+  @media (min-width: $desctop-hd) {
+    flex: 1 1 25%; 
+    max-width: 25%;
   
-      .banner__item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 375px;
-        height: 120px;
-         @media (min-width: $tablet-sd) {
-          width: 256px;
-        }
-      
-        @media (min-width: $tablet-hd) {
-          width: 256px;;
-        }
-      
-        @media (min-width: $desctop-cd) {
-          width: 360px;
-        }
-      
-        @media (min-width: $desctop-hd) {
-          width: 430px;
-        }
-    
-        &.hillel {
-          background-color: #1c4280;
-        }
-        &.wannabiz {
-          background-color: #143646;
-        }
-        &.tapgerine {
-          background-color: #f48b30;
-        }
-        &.look3d {
-          background-color: #9e4dc3;
-        }
-        &.orangear {
-          background-color: #fd9339;
-        }
-        &.adtelligent {
-          background-color: #e2e2e4;
-        }
-        &.clickky{
-          background-color: #C71C36;
-        }
-        &.ecolease {
-          background-color: #DCF3F9;
-        }
-        &.infratek {
-          background-color: #EAEAEA;
-        }
-        &.city-park {
-          background-color: #282240;
-        }
-        &.art-print{
-          background-color: #1D4568;
-        }
-        &.ultimate {
-          background-color: #000000;
-        }
-      }
-    }
-    @media (max-width: $mobile) {
-      .banner .banner-hidden {
-        display: none;
-      }
-    }
+  }
+  &.hillel {
+    background-color: #1c4280;
+  }
+  &.wannabiz {
+    background-color: #143646;
+  }
+  &.tapgerine {
+    background-color: #f48b30;
+  }
+  &.look3d {
+    background-color: #9e4dc3;
+  }
+  &.orangear {
+    background-color: #fd9339;
+  }
+  &.adtelligent {
+    background-color: #e2e2e4;
+  }
+  &.clickky{
+    background-color: #C71C36;
+  }
+  &.ecolease {
+    background-color: #DCF3F9;
+  }
+  &.infratek {
+    background-color: #EAEAEA;
+  }
+  &.city-park {
+    background-color: #282240;
+  }
+  &.art-print{
+    background-color: #1D4568;
+  }
+  &.ultimate {
+    background-color: #000000;
+  }
+}
+
+@media (max-width: $mobile) {
+  .banner .banner-hidden {
+    display: none;
+  }
+}
 
     .nav__list {
       li.active a {
