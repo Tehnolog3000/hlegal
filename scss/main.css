@@ -1010,7 +1010,8 @@ html {
 }
 @media (max-width: 768px) {
   .service-block {
-    flex: 1 1 calc(50% - 20px);
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 @media (max-width: 375px) {
