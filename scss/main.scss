@@ -941,6 +941,82 @@ html {
 .team-photo{
   display: block;
 }
+.second-slide img {
+  display: block; 
+
+  @media (min-width: $mobile) {
+    width: 315px;
+    height: 500px;
+    object-fit: cover;
+    object-position: 50% 100%;
+  }
+
+  @media (min-width: $tablet-sd) {
+    width: 648px;
+    height: 500px;
+    object-fit: cover;
+    object-position: 100% 82%;
+  }
+
+  @media (min-width: $tablet-hd) {
+    width: 400px;
+    height: 528px;
+    object-fit: cover;
+    object-position: 45% 100%;
+  }
+  @media (min-width: $desctop-cd) {
+    width: 400px;
+    height: 344px;
+    object-fit: cover;
+    object-position: 100% 70%; 
+  
+  } 
+  @media (min-width: $desctop-hd) {
+    width: 400px;
+    height: 298px;
+    object-fit: cover;
+    object-position: 100% 75%; 
+  
+  } 
+}
+.third-slide img {
+  display: block; 
+
+  @media (min-width: $mobile) {
+    width: 315px;
+    height: 500px;
+    object-fit: cover;
+    object-position: 50% 100%;
+  }
+
+  @media (min-width: $tablet-sd) {
+    width: 648px;
+    height: 500px;
+    object-fit: cover;
+    object-position: 100% 82%;
+  }
+
+  @media (min-width: $tablet-hd) {
+    width: 400px;
+    height: 528px;
+    object-fit: cover;
+    object-position: 70% 100%;
+  }
+  @media (min-width: $desctop-cd) {
+    width: 400px;
+    height: 344px;
+    object-fit: cover;
+    object-position: 100% 70%; 
+  
+  } 
+  @media (min-width: $desctop-hd) {
+    width: 400px;
+    height: 298px;
+    object-fit: cover;
+    object-position: 100% 75%; 
+  
+  } 
+}
 
 .team-descr{
   display: flex;
@@ -981,6 +1057,11 @@ html {
   }
   p {
     @include p-small;
+  }
+  @media (min-width: $tablet-sd) {
+    br {
+      display: none;
+    }
   }
 }
 .slick-dots li{

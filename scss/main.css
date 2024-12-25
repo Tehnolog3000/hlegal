@@ -1057,6 +1057,114 @@ html {
   display: block;
 }
 
+.second-slide img {
+  display: block;
+}
+@media (min-width: 375px) {
+  .second-slide img {
+    width: 315px;
+    height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 100%;
+       object-position: 50% 100%;
+  }
+}
+@media (min-width: 768px) {
+  .second-slide img {
+    width: 648px;
+    height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 100% 82%;
+       object-position: 100% 82%;
+  }
+}
+@media (min-width: 1024px) {
+  .second-slide img {
+    width: 400px;
+    height: 528px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 45% 100%;
+       object-position: 45% 100%;
+  }
+}
+@media (min-width: 1440px) {
+  .second-slide img {
+    width: 400px;
+    height: 344px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 100% 70%;
+       object-position: 100% 70%;
+  }
+}
+@media (min-width: 1920px) {
+  .second-slide img {
+    width: 400px;
+    height: 298px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 100% 75%;
+       object-position: 100% 75%;
+  }
+}
+
+.third-slide img {
+  display: block;
+}
+@media (min-width: 375px) {
+  .third-slide img {
+    width: 315px;
+    height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 100%;
+       object-position: 50% 100%;
+  }
+}
+@media (min-width: 768px) {
+  .third-slide img {
+    width: 648px;
+    height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 100% 82%;
+       object-position: 100% 82%;
+  }
+}
+@media (min-width: 1024px) {
+  .third-slide img {
+    width: 400px;
+    height: 528px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 70% 100%;
+       object-position: 70% 100%;
+  }
+}
+@media (min-width: 1440px) {
+  .third-slide img {
+    width: 400px;
+    height: 344px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 100% 70%;
+       object-position: 100% 70%;
+  }
+}
+@media (min-width: 1920px) {
+  .third-slide img {
+    width: 400px;
+    height: 298px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 100% 75%;
+       object-position: 100% 75%;
+  }
+}
+
 .team-descr {
   display: flex;
   flex-direction: column;
@@ -1131,6 +1239,11 @@ html {
   font-weight: 400;
   line-height: 22px;
   text-align: left;
+}
+@media (min-width: 768px) {
+  .team-names br {
+    display: none;
+  }
 }
 
 .slick-dots li button:before {
