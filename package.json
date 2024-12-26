@@ -1,0 +1,22 @@
+{
+  "name": "hlegals",
+  "version": "1.0.0",
+  "description": "Gulp-based frontend build system for Hlegals project",
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.83.0"
+  }
+}
